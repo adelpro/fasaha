@@ -73,11 +73,28 @@ from Amazon, Cursor, Microsoft, OpenAI (Codex), and Vercel ecosystems.
 - Any Arabic quality check (e.g. "راجع لي هذا", "صحح العربية", "ترجم هذا للعربية")
 - Proactively before outputting Arabic prose longer than 2-3 sentences
 
+## Sources & QALB attribution
+
+Fasaha is grounded in the Qatar Arabic Language Bank (QALB) annotation guidelines —
+the closest published standard for correcting AI/MT-generated Arabic. The rule sets,
+worked correction examples, and dialect classification in `references/` are condensed
+and adapted from this source:
+
+- **QALB Guidelines v0.90 (PDF):** http://nlp.qatar.cmu.edu/qalb/QALB-guidelines_0.90.pdf
+- **QALB project page:** http://nlp.qatar.cmu.edu/qalb/
+- **Authors:** Wajdi Zaghouani, Nizar Habash, Behrang Mohit — Carnegie Mellon University
+  Qatar & Columbia University (2013)
+- **Corpus:** 2 million words of Arabic (native, non-native, and machine-translation output)
+  manually corrected by human annotators
+
+Sections 5, 6 and the dialect/spelling references map directly to QALB; Section 7 documents
+where the 2013 guidelines do not predict modern LLM failure modes.
+
 ## License
 
 [MIT](LICENSE). The skill condenses and adapts rules from the QALB Guidelines
-v0.90 (Zaghouani, Habash & Mohit, CC-BY-licensed corpus); see `references/sources.md`
-for full attribution.
+v0.90 (Zaghouani, Habash & Mohit). See [Sources & QALB attribution](#sources--qalb-attribution)
+and `references/sources.md` for full attribution.
 
 ## Author
 
