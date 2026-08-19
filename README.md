@@ -13,7 +13,7 @@ LLM translation failures.
 ## Direct reference
 
 - **Repository:** https://github.com/adelpro/fasaha
-- **Raw SKILL.md:** https://raw.githubusercontent.com/adelpro/fasaha/main/SKILL.md
+- **Raw SKILL.md:** https://raw.githubusercontent.com/adelpro/fasaha/main/skills/fasaha/SKILL.md
 - **Install (copy-paste):** `npx skills add adelpro/fasaha`
 
 ## What it fixes
@@ -43,15 +43,27 @@ It ships **living reference files** that any agent updates over time:
 
 ## Install
 
+Any agent via skills.sh:
+
 ```bash
 npx skills add adelpro/fasaha
 ```
 
-For Claude Code:
+Claude Code (skills.sh route):
 
 ```bash
 npx skills add adelpro/fasaha -a claude-code
 ```
+
+Claude Code (marketplace route):
+
+```bash
+claude plugin marketplace add github.com/adelpro/fasaha
+claude plugin install fasaha@adelpro-fasaha
+```
+
+Agent Plugins 1.0.0 bundle (`plugin.json` at repo root) — loadable by compatible clients
+from Amazon, Cursor, Microsoft, OpenAI (Codex), and Vercel ecosystems.
 
 ## Usage triggers
 

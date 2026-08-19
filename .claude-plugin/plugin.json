@@ -1,0 +1,9 @@
+{
+  "name": "fasaha",
+  "description": "Arabic fluency and correction skill (QALB-grounded).",
+  "version": "1.1.0",
+  "author": {
+    "name": "Adel Ben Yahia"
+  },
+  "license": "MIT"
+}

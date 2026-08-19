@@ -1,0 +1,16 @@
+{
+  "name": "adelpro-fasaha",
+  "owner": {
+    "name": "Adel Ben Yahia"
+  },
+  "plugins": [
+    {
+      "name": "fasaha",
+      "source": {
+        "source": "github",
+        "repo": "adelpro/fasaha"
+      },
+      "description": "Arabic fluency and correction skill (QALB-grounded)."
+    }
+  ]
+}
