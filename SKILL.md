@@ -3,7 +3,7 @@ name: fasaha
 version: 1.1.0
 author: Adel Ben Yahia (adelpro)
 license: MIT
-description: "Review and fix AI-generated or AI-translated Arabic so it reads as fluent, native Modern Standard Arabic (MSA) instead of translated/calqued output. Trigger on translating INTO Arabic, writing original Arabic, or reviewing/correcting/proofreading Arabic (‘راجع لي هذا’, 'صحح العربية', 'ترجم هذا للعربية', any Arabic quality check), and proactively before outputting Arabic prose longer than 2-3 sentences. Covers: Latin-script leakage, English sentence-structure calque, word choice/terminology, morphology/agreement, punctuation, hamza spelling, dialectal leakage into MSA. Ships a self-maintained register profile (voice-profile.md) for tone and MSA-vs-Darija choice, a runnable checklist, a terminology glossary, and an accumulating failure log. Register-focused; a separate style/voice skill may layer after it."
+description: "Review and fix AI-generated or AI-translated Arabic so it reads as fluent, native Modern Standard Arabic (MSA) instead of translated/calqued output. Trigger on translating INTO Arabic, writing in Arabic (اكتب بالعربية / اكتبلي بالعربية), writing original Arabic, or reviewing/correcting/proofreading Arabic (‘راجع لي هذا’, 'صحح العربية', 'ترجم هذا للعربية', any Arabic quality check), and proactively before outputting Arabic prose longer than 2-3 sentences. Covers: Latin-script leakage, English sentence-structure calque, word choice/terminology, morphology/agreement, punctuation, hamza spelling, dialectal leakage into MSA. Ships a self-maintained register profile (voice-profile.md) for tone and MSA-vs-Darija choice, a runnable checklist, a terminology glossary, and an accumulating failure log. Register-focused; a separate style/voice skill may layer after it."
 metadata:
   version: 1.1.0
   tags: [arabic, translation, editing, quality, msa]
@@ -34,6 +34,7 @@ http://nlp.qatar.cmu.edu/qalb/QALB-guidelines_0.90.pdf. Full bibliography with l
 ## When to use this
 
 - The user asks to translate something into Arabic
+- The user asks to write in Arabic (اكتب بالعربية / اكتبلي بالعربية) or write original Arabic content
 - The user asks to review, correct, or proofread existing Arabic text (their own or AI-generated)
 - Claude is about to output more than 2-3 sentences of original Arabic prose (article, README,
   community post, forum reply, commit message translation, etc.) — run this before finalizing,

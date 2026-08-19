@@ -10,6 +10,12 @@ Grounded in the QALB (Qatar Arabic Language Bank) annotation guidelines
 (Zaghouani, Habash & Mohit, CMU-Qatar/Columbia, 2013) plus patterns specific to
 LLM translation failures.
 
+## Direct reference
+
+- **Repository:** https://github.com/adelpro/fasaha
+- **Raw SKILL.md:** https://raw.githubusercontent.com/adelpro/fasaha/main/SKILL.md
+- **Install (copy-paste):** `npx skills add adelpro/fasaha`
+
 ## What it fixes
 
 - **Latin-script leakage** — English words left untranslated in technical/marketing copy
