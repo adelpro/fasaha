@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fasaha",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Arabic fluency and correction skill: review and fix AI-generated or AI-translated Arabic so it reads as fluent, native Modern Standard Arabic (MSA) instead of translated/calqued output.",
   "author": {
     "name": "Adel Ben Yahia"
