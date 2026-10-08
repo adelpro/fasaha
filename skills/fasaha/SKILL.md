@@ -1,11 +1,11 @@
 ---
 name: fasaha
-version: 1.1.1
+version: 1.2.0
 author: Adel Ben Yahia (adelpro)
 license: MIT
 description: "Review and fix AI-generated or AI-translated Arabic so it reads as fluent, native Modern Standard Arabic (MSA) instead of translated/calqued output. Trigger on translating INTO Arabic, writing in Arabic (اكتب بالعربية / اكتبلي بالعربية), writing original Arabic, or reviewing/correcting/proofreading Arabic (‘راجع لي هذا’, 'صحح العربية', 'ترجم هذا للعربية', any Arabic quality check), and proactively before outputting Arabic prose longer than 2-3 sentences. Covers: Latin-script leakage, English sentence-structure calque, word choice/terminology, morphology/agreement, punctuation, hamza spelling, dialectal leakage into MSA. Ships a self-maintained register profile (voice-profile.md) for tone and MSA-vs-Darija choice, a runnable checklist, a terminology glossary, and an accumulating failure log. Register-focused; a separate style/voice skill may layer after it."
 metadata:
-  version: 1.1.0
+  version: 1.2.0
   tags: [arabic, translation, editing, quality, msa]
 ---
 
@@ -43,13 +43,18 @@ http://nlp.qatar.cmu.edu/qalb/QALB-guidelines_0.90.pdf. Full bibliography with l
 
 ## The Process
 
-1. Draft or obtain the Arabic text (literal translation is fine as a first pass — don't try to
+1. **Read `references/llm-failure-log.md` first.** Known failures are checked before the general
+   checklist, so a pattern already caught once is never missed twice.
+2. Draft or obtain the Arabic text (literal translation is fine as a first pass — don't try to
    get it right in one shot)
-2. Run the checklist in `references/checklist.md` — Sections 1-7 below plus the register pass —
+3. Run the checklist in `references/checklist.md` — Sections 1-7 below plus the register pass —
    against the draft
-3. Rewrite based on what the checklist catches
-4. Apply the matching register profile from `references/voice-profile.md` for tone and formality
+4. Rewrite based on what the checklist catches
+5. Apply the matching register profile from `references/voice-profile.md` for tone and formality
    (MSA vs Darija), fall back to a separate personal voice skill if one exists
+6. **Append any genuinely new pattern to `references/llm-failure-log.md`** using its entry schema.
+   One entry per *new* pattern, never one per run, and never delete an existing entry. This is the
+   feedback edge — it is what makes the next review faster.
 
 Don't skip straight to a "polished" single-pass translation — the calque problem (Section 2) is
 much easier to catch by explicitly checking sentence boundaries against the source than by trying
@@ -177,7 +182,9 @@ itself, since modern LLMs default to MSA unless steered otherwise.
 - `references/voice-profile.md` — a generic, self-maintained register profile. After the
   correctness pass in Sections 1-6, apply the matching register (MSA vs Darija, formal vs casual,
   tone, terminology) from here. Any agent updates it directly as the user states register
-  preferences or corrects output. If no profile fits the task, ask which register to use.
+  preferences or corrects output. If no profile fits the task, apply the caller's own voice skill
+  when one is loaded; only ask which register when there is no such skill and the user has not
+  stated a preference.
 - `references/checklist.md` — the runnable quality gate: every Section 1-7 + register check as a
   single pass, with a prescribed output shape. Run this to enforce and audit the correction work.
 - `references/terminology.md` — accumulating glossary of standard Arabic renderings for web-dev
