@@ -37,6 +37,7 @@ domain-standard rendering, and add it here.
 | code / codebase | الشيفرة (البرمجية) | `الكود` is the common informal/regional form — see Register notes |
 | error / bug | خطأ / خلل | |
 | test | اختبار | |
+| console [operator UI] | لوحة التحكم | `اللوحة` after the first mention; never `لوحة القيادة` |
 
 ## E-commerce & marketing
 
@@ -60,6 +61,18 @@ domain-standard rendering, and add it here.
 | return on investment (ROI) | العائد على الاستثمار | keep `ROI` in Latin if preferred |
 | WhatsApp | واتساب | keep `WhatsApp` in Latin in ads |
 
+## Privacy & telemetry (settled 2026-10-30, open-tilawa)
+
+| English | Arabic | Notes |
+|---|---|---|
+| analytics / usage statistics | إحصاءات الاستخدام | Google's own Arabic term. `التحليلات` is Apple's; pick one per product |
+| telemetry | — | do not transliterate; name the thing (`إحصاءات التشغيل`) |
+| anonymous | مجهولة الهوية / بلا اسم | prefer a verb clause: `لا نعرف من أنت` |
+| opt in / opt out | تشغيلها / إيقافها | the toggle acts on the *feature*, not on "consent" |
+| off by default | معطّلة حتى تشغّلها | avoid `متوقّفة افتراضياً` — a calque of "off by default" |
+| IP address | عنوان الإنترنت | never `عنوان الشبكة` — that reads as the local network address |
+| we do not store | لا نحتفظ بـ | use only when true; `لا يُرسَل` is false if the request carries it |
+
 ## Register notes (Darija / formal)
 
 - For low-literacy Algerian e-commerce marketing, prefer Darija-friendly terms
@@ -73,3 +86,5 @@ domain-standard rendering, and add it here.
 - 2026-08-19 — glossary created with starter set (web dev + e-commerce). Extend as terms get settled.
 - 2026-08-19 — resolved: `code/codebase` canonical = `الشيفرة (البرمجية)`; `الكود` noted as informal/regional.
   (Change here if a preferred form is stated later.)
+- 2026-10-29 — `console` (operator UI) settled as `لوحة التحكم`, short form `اللوحة`; project-wide choice
+  in open-tilawa/reviews, replacing "dashboard" in English copy.

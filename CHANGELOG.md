@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.3.0 — 2026-10-30
+
+- Six new entries in the accumulating failure log, all caught reviewing real Arabic UI copy:
+  passive + abstract nouns in a privacy claim (`تُرسَل … إلى خادمنا وحده`), «off by default» glued
+  onto a state (`متوقّفة افتراضياً`), a dangling participle (`ولا عنوان شبكة محفوظ`), the answer
+  clause of `إن` left as a bare present, the `X، لا Y` apposition, and an imperative standing in
+  for a consequence (`امسح … فيذهب`)
+- The register profile gains its first concrete profile (Tilawa app UI) and the rule that
+  addresses the root cause rather than the symptom: compose from the Arabic intent, never
+  translate a finished English sentence — a corrector can only grade the shape it is given
+- Terminology: a privacy/telemetry block (analytics, anonymous, opt in/out, IP address, "we do not
+  store") so the same terms stop being decided once per string
+
 ## 1.2.0 — 2026-10-08
 
 - Wired the accumulating failure log into the process: step 1 reads `references/llm-failure-log.md`

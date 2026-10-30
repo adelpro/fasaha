@@ -50,7 +50,31 @@ field is enough.
 
 ---
 
+## Profile 1 — Tilawa app UI (open-tilawa)
+
+- scope: user-facing strings in `apps/web/src/i18n/messages.ts` and docs shown to users
+- language: MSA
+- formality: semi-formal, literary without being ornate
+- audience: general Arabic-speaking listeners
+- tone: calm, plain, quiet confidence; never sells
+- preferences:
+  - short declaratives; one idea per row/hint, the long explanation behind a details link
+  - compose from the Arabic intent, never from a finished English sentence: translating a
+    finished sentence preserves its shape, and the shape is what reads as machine-written
+  - domain vocabulary fixed by the app: الأقران (peers), خادمنا (our server), التلاوة, القارئ,
+    حلقة (ring), المزامنة, مؤقّت النوم
+  - em dash / `—` used inside hints exactly as the existing copy does
+  - concrete claims only: "لا نحفظ" over "لا يُرسَل" when the request does carry it
+- never:
+  - Latin-script tech jargon (تليمتري، أناليتكس، ديب لينك) — name the thing in Arabic
+  - absolute privacy claims the transport cannot honour
+  - exclamation marks, marketing intensifiers, emoji
+
+---
+
 ## Update log
 
 - 2026-08-19 — file created as a generic self-maintained template. No profiles yet.
   First profile appears when the owner states a register preference or corrects output.
+- 2026-10-30 — Profile 1 added from open-tilawa's existing `messages.ts` register
+  (MSA, terse, no Latin jargon) while writing the telemetry toggle copy.
