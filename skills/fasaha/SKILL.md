@@ -41,6 +41,18 @@ http://nlp.qatar.cmu.edu/qalb/QALB-guidelines_0.90.pdf. Full bibliography with l
   don't wait to be asked
 - The user asks why their Arabic output "feels off" or "sounds translated"
 
+## Arabic Language Requirements
+
+- Use natural, professional Modern Standard Arabic.
+- Avoid literal translations from English.
+- Prefer concise, fluent Arabic over unnecessarily formal language.
+- Preserve correct Arabic grammar, punctuation and terminology.
+- Respect RTL layout and Arabic typography.
+- Keep technical terms in English when they are more recognizable.
+- Never invent or reconstruct Quranic verses.
+- Use verified Quran sources for all Quranic quotations.
+- Review Arabic output for fluency before considering the task complete.
+
 ## The Process
 
 1. **Read `references/llm-failure-log.md` first.** Known failures are checked before the general
